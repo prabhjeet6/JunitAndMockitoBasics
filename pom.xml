@@ -1,12 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.junitandmockitobasics</groupId>
-  <artifactId>junitandmockitobasics</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  
-  <dependencies>
-	<dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.junitandmockitobasics</groupId>
+	<artifactId>junitandmockitobasics</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<dependencies>
+		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-library</artifactId>
 			<version>1.3</version>
@@ -28,7 +30,7 @@
 			<version>4.0.0</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 
 
 		<!-- <dependency> <groupId>org.powermock</groupId> <artifactId>powermock-api-mockito</artifactId> 
@@ -36,9 +38,19 @@
 			<artifactId>powermock-module-junit4</artifactId> <version>1.6.4</version> 
 			<scope>test</scope> </dependency> -->
 
+		<!--Powermock is not well supported with Java 8+, 'mockito-inline' dependency 
+			is added that provides mockito's support for testing static methods -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-inline</artifactId>
+			<version>3.8.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -53,5 +65,5 @@
 		</plugins>
 	</build>
 
-  
+
 </project>
