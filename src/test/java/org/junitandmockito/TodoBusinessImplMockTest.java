@@ -19,8 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-import org.junitandmockito.TodoBusinessImpl;
-import org.junitandmockito.TodoService;
 import org.mockito.ArgumentCaptor;
 
 /**

@@ -1,8 +1,8 @@
 package org.junitandmockito;
+
 /**
  * 
  */
-
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
@@ -38,7 +38,10 @@ import org.mockito.junit.MockitoRule;
 
 // @RunWith(MockitoJUnitRunner.class)
 public class TodoBusinessImplMockTestWithAnnotations {
-
+	/**
+	 * A Collaborator class('TodoService' in this case) is one, which is mocked to
+	 * test the SUT('TodoBusinessImpl' in this case).
+	 */
 	@Mock
 	TodoService mockTodoService;
 
@@ -55,7 +58,6 @@ public class TodoBusinessImplMockTestWithAnnotations {
 	 */
 	@Rule
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
-	
 
 	@Test
 	public void testRetrieveTodosRelatedToSpring_usingAMock() {
