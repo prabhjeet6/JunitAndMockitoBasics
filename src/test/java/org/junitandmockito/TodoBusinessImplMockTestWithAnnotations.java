@@ -17,16 +17,12 @@ import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junitandmockito.TodoBusinessImpl;
-import org.junitandmockito.TodoService;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 

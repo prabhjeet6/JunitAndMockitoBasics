@@ -31,4 +31,7 @@ public class SystemUnderTest {
 			sum += stat;
 		return sum;
 	}
+	public int arithmeticException() {
+		return 1/0;
+	}
 }

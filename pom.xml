@@ -15,11 +15,32 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<!-- Junit 4 dependency Vintage Engine dependency from Junit5 can also 
+				be used here to support legacy Junit4 code base, instead of Junit4 dependency -->
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Junit 5 platform and api dependencies -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+
 		<!-- Using mockito-core dependency instead of mockito-all dependency to 
 			avoid ExceptionInInitializerError -->
 		<!-- <dependency> <groupId>org.mockito</groupId> <artifactId>mockito-all</artifactId> 
