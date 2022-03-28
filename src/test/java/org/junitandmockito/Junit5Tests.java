@@ -1,13 +1,15 @@
 package org.junitandmockito;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.condition.EnabledOnOs;
@@ -21,6 +23,25 @@ import org.junit.jupiter.api.condition.OS;
 public class Junit5Tests {
 
 	SystemUnderTest systemUnderTest;
+
+	@Nested
+	class AddTest {
+		@Test
+		public void testAddPositiveNumbers() {
+			assertEquals(2, 1 + 1);
+		}
+
+		@Test
+		public void testAddNegativeNumbers() {
+			assertEquals(-2, (-1) + (-1));
+		}
+
+		/** assertAll(...) introduced in Junit5 with Lambda Capability */
+		public void testMultiplyNumbers() {
+			assertAll(() -> assertEquals(1, 1 * 1), () -> assertEquals(1, -1 * -1), () -> assertEquals(-1, -1 * 1));
+		}
+
+	}
 
 	/** @BeforeEach is Junit 5 version. @Before is Junit4 counterpart */
 	@BeforeEach
